@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import bemfy, { c } from 'bemfy'
 
-import { ExampleComponent } from 'bemfy'
-import 'bemfy/dist/index.css'
+const Component = () => {
+  const b = bemfy("custom-button");
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <div className={b('wrapper')}>
+    <div className={b('text', 'white')}>The lazy cat jumps over dizzy fox</div>
+    <button className={b('button', 'primary', 'independent-class', c({ 'not-render': false, 'will-render': true }) )}>Jump!</button>
+  </div>
 }
 
-export default App
+export default Component;
