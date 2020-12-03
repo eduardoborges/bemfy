@@ -26,7 +26,7 @@ const Component = () => {
 
   return <div className={b('wrapper')}>
     <div className={b('text', 'white')}>The lazy cat jumps over dizzy fox</div>
-    <button className={b('button', 'primary', 'independent-class', c({ 'not-render': false, 'will-render': true }) )}>Jump!</button>
+    <button className={b('button', 'primary')}>Jump!</button>
   </div>
 }
 
