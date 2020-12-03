@@ -1,10 +1,13 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+import c from './classes'
 
-interface Props {
-  text: string
+const bem = (block: string = 'block') => {
+  return (element?: string, modifier?: string, ...others: string[]) => {
+    let blockEl = block
+    if (element) blockEl = `${blockEl}__${element}`
+    if (modifier) blockEl = `${blockEl}--${modifier}`
+    return c([blockEl, ...others])
+  }
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export default bem
+export { c }
