@@ -1,34 +1,26 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": [
-    "standard",
-    "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react",
-    "plugin:@typescript-eslint/eslint-recommended"
-  ],
   "env": {
-    "node": true
+    "browser": true,
+    "es6": true
   },
+  "extends": [
+    "airbnb-typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
-      "legacyDecorators": true,
       "jsx": true
-    }
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
-  "settings": {
-    "react": {
-      "version": "16"
-    }
-  },
-  "rules": {
-    "space-before-function-paren": 0,
-    "react/prop-types": 0,
-    "react/jsx-handler-names": 0,
-    "react/jsx-fragments": 0,
-    "react/no-unused-prop-types": 0,
-    "import/export": 0
-  }
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ]
 }
