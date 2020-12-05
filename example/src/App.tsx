@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react';
 import bemfy, { c } from 'bemfy'
 
