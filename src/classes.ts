@@ -1,8 +1,6 @@
-export interface ClassObject {
-  [key: string]: boolean | unknown
-}
+export type ClassObject = Record<string, boolean |any>;
 
-export interface ClassArray extends Array<Class> {}
+export type ClassArray = Class[];
 
 export type Class = string | number | ClassObject | ClassArray;
 
