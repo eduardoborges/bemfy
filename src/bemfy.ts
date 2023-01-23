@@ -1,8 +1,6 @@
 import c from './classes';
 
-const bem = (block: string = 'block') => (
-  element?: string, modifier?: string, ...others: string[]
-) => {
+const bem = (block: string = 'block') => (element?: string, modifier?: string, ...others: string[]) => {
   let blockEl = block;
   if (element) blockEl = `${blockEl}__${element}`;
   if (modifier) blockEl = `${blockEl}--${modifier}`;

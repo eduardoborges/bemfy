@@ -1,4 +1,4 @@
-export type ClassObject = Record<string, boolean |any>;
+export type ClassObject = Record<string, boolean | any>;
 
 export type ClassArray = Class[];
 

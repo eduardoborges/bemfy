@@ -1,4 +1,4 @@
-import bem, { c } from './index';
+import bem, { c } from './bemfy';
 
 describe('bem helper', () => {
   test('test block declaration', () => {
